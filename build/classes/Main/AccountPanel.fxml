@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="927.0" style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller">
+   <children>
+      <Pane layoutX="199.0" layoutY="1.0" prefHeight="677.0" prefWidth="727.0">
+         <children>
+            <Pane fx:id="AddAccountPane" layoutY="13.0" prefHeight="655.0" prefWidth="727.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Pane layoutY="73.0" prefHeight="592.0" prefWidth="727.0">
+                     <children>
+                        <TextField fx:id="E_mailpassword" layoutX="162.0" layoutY="114.0" prefHeight="25.0" prefWidth="489.0" />
+                        <Label layoutX="17.0" layoutY="45.0" prefHeight="25.0" prefWidth="140.0" text="E_mail">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="109.0" prefHeight="25.0" prefWidth="140.0" text="PASSWORD">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="E_mail" layoutX="162.0" layoutY="50.0" prefHeight="25.0" prefWidth="489.0" />
+                        <Button layoutX="523.0" layoutY="540.0" mnemonicParsing="false" onAction="#Exit" prefHeight="25.0" prefWidth="175.0" style="-fx-background-color: #2d3436;" text="exit" textFill="#0984e3" />
+                        <Button layoutX="14.0" layoutY="540.0" mnemonicParsing="false" onAction="#add_data" prefHeight="25.0" prefWidth="191.0" style="-fx-background-color: #2d3436;" text="ADD" textFill="#0984e3" />
+                        <Button layoutX="14.0" layoutY="262.0" mnemonicParsing="false" onAction="#Generta_Random_Password" prefHeight="34.0" prefWidth="221.0" style="-fx-background-color: #2d3436;" text="GENERTA A RANDOM PASSWORD" textFill="#0984e3" />
+                        <Button layoutX="308.0" layoutY="262.0" mnemonicParsing="false" onAction="#Reset_Password" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: #2d3436;" text="RESET PASSWORD" textFill="#0984e3" />
+                        <Button layoutX="544.0" layoutY="262.0" mnemonicParsing="false" onAction="#Reset_Username" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #2d3436;" text="RESET USERNAME" textFill="#0984e3" />
+                        <Label layoutX="14.0" layoutY="167.0" prefHeight="25.0" prefWidth="140.0" text="Description">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="Descripitioninput" layoutX="162.0" layoutY="172.0" prefHeight="25.0" prefWidth="489.0" />
+                        <Pane fx:id="confrimpane" disable="true" layoutX="1.0" layoutY="298.0" prefHeight="247.0" prefWidth="727.0" style="-fx-background-color: #fff;" visible="false">
+                           <children>
+                              <Label layoutX="21.0" layoutY="22.0" prefHeight="25.0" prefWidth="140.0" text="Username">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="21.0" layoutY="135.0" prefHeight="25.0" prefWidth="140.0" text="Password">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="confUsername" layoutX="161.0" layoutY="27.0" prefHeight="25.0" prefWidth="406.0" />
+                              <PasswordField fx:id="confpassword" layoutX="161.0" layoutY="140.0" prefHeight="25.0" prefWidth="406.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="-10.0" prefHeight="85.0" prefWidth="727.0" style="-fx-background-color: #2d3436;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="7.0" layoutY="-13.0" prefHeight="100.0" prefWidth="564.0" style="-fx-alignment: center;" text="Account Details" textFill="#0984e3" underline="true">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+            <Pane fx:id="tabledatapane" disable="true" layoutX="6.0" layoutY="1.0" prefHeight="667.0" prefWidth="727.0" style="-fx-background-color: #fff;" visible="false">
+               <children>
+                  <Pane prefHeight="61.0" prefWidth="727.0" style="-fx-background-color: #2d3436;">
+                     <children>
+                        <Label id="welcome" prefHeight="73.0" prefWidth="727.0" style="-fx-alignment: center;" styleClass="mainFxmlClass" stylesheets="@../css/fxml.css" text="Table data" textFill="#0984e3">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <effect>
+                              <ColorAdjust>
+                                 <input>
+                                    <Glow />
+                                 </input>
+                              </ColorAdjust>
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="30.0" layoutY="72.0" prefHeight="602.0" prefWidth="696.0">
+                     <children>
+                        <TableView fx:id="TableAccountData" cache="true" editable="true" layoutX="-30.0" layoutY="63.0" prefHeight="532.0" prefWidth="727.0">
+                          <columns>
+                            <TableColumn fx:id="E_mailcol" prefWidth="164.0" resizable="false" text="E_mail" />
+                            <TableColumn fx:id="PasswordCol" minWidth="0.0" prefWidth="381.0" resizable="false" text="password" />
+                              <TableColumn fx:id="Descripitioncol" maxWidth="5006.0" minWidth="0.0" prefWidth="239.0" resizable="false" text="Descripition" />
+                          </columns>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Pane layoutX="-31.0" layoutY="-11.0" prefHeight="73.0" prefWidth="727.0" style="-fx-background-color: #2d3436;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="1.0" prefHeight="34.0" prefWidth="104.0" text="username" textFill="#0984e3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="367.0" layoutY="-4.0" prefHeight="34.0" prefWidth="96.0" text="password" textFill="#0984e3">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="user" layoutX="134.0" layoutY="6.0" prefHeight="13.0" prefWidth="182.0" />
+                              <PasswordField fx:id="pass" layoutX="491.0" layoutY="5.0" prefHeight="25.0" prefWidth="221.0" />
+                              <Button layoutX="276.0" layoutY="37.0" mnemonicParsing="false" onAction="#showdata" prefHeight="25.0" prefWidth="182.0" style="-fx-background-color: #0984e3;" text="Show Data">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane prefHeight="667.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="ModifeyAccount" layoutX="1.0" layoutY="582.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #0984e3;" styleClass="mainFxmlClass" stylesheets="@../css/fxml.css" text="Modifey Account">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="ShowyourAccount" layoutX="1.0" layoutY="311.0" mnemonicParsing="false" onAction="#Account_Table_Pane" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #0984e3;" styleClass="mainFxmlClass" stylesheets="@../css/fxml.css" text="Show your Account">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="AddAccount" layoutY="92.0" mnemonicParsing="false" onAction="#Add_Acount_Pane" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #0984e3;" styleClass="mainFxmlClass" stylesheets="@../css/fxml.css" text="Add Account">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Label id="welcome" layoutX="1.0" layoutY="7.0" prefHeight="61.0" prefWidth="200.0" style="-fx-alignment: center;" styleClass="mainFxmlClass" stylesheets="@../css/fxml.css" text="welcome" textFill="#0984e3">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</Pane>
